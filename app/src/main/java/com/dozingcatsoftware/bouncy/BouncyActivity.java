@@ -623,6 +623,10 @@ public class BouncyActivity extends Activity {
         gotoPreferences();
     }
 
+    // Function to exit the game
+    public void ExitGame(){
+        System.exit(0);
+    }
     public void doAbout(View view) {
         gotoAbout();
     }

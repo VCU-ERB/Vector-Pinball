@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-mdpi_icon.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-mdpi/icon.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/layout_rounded_border.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/layout/rounded_border.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-ldpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-ldpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xhdpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xhdpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xxxhdpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xxxhdpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-anydpi-v26_icon.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-anydpi-v26/icon.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-xxxhdpi_icon.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-xxxhdpi/icon.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-hdpi_icon.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-hdpi/icon.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/layout_main.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/layout/main.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-xxhdpi_icon.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-xxhdpi/icon.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-hdpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-hdpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-mdpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-mdpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-xhdpi_icon.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-xhdpi/icon.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xxhdpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xxhdpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-ldpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-ldpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/xml_preferences.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/mipmap-xxxhdpi_icon_foreground.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/mipmap-xxxhdpi/icon_foreground.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/raw_androidpad.ogg.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/raw/androidpad.ogg"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-mdpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-mdpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "com.dozingcatsoftware.bouncy.app-merged_res-5:/layout_main.xml.flat",
+        "source": "com.dozingcatsoftware.bouncy.app-main-7:/layout/main.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xxhdpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xxhdpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xhdpi_ic_baseline_arrow_left_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xhdpi/ic_baseline_arrow_left_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/raw_drumbassloop.ogg.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/raw/drumbassloop.ogg"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-xxxhdpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-xxxhdpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-anydpi-v21_ic_baseline_arrow_right_60.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-pngs-0:/drawable-anydpi-v21/ic_baseline_arrow_right_60.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/layout_about.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/layout/about.xml"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-hdpi_ic_baseline_arrow_right_60.png.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-main-7:/drawable-hdpi/ic_baseline_arrow_right_60.png"
+    },
+    {
+        "merged": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-merged_res-5:/drawable-anydpi-v21_ic_baseline_arrow_left_60.xml.flat",
+        "source": "/Users/david/.gradle/daemon/7.4/com.dozingcatsoftware.bouncy.app-pngs-0:/drawable-anydpi-v21/ic_baseline_arrow_left_60.xml"
+    }
+]
