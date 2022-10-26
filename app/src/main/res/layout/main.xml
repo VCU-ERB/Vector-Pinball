@@ -145,14 +145,14 @@
                     android:text="@string/preferences_button_label" />
 
 				<!-- This is where I created the button -->
-				<!--If focusable is set to true you have to double click to exit-->
+				<!--If focusable is set to true you have to double click/hold to exit-->
 				<Button
 					android:id="@+id/exitGame"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginBottom="10sp"
 					android:onClick="ExitGame"
-					android:focusableInTouchMode="true"
+					android:focusableInTouchMode="false"
 					android:text="Exit Game" />
             </TableLayout>
         </LinearLayout>
