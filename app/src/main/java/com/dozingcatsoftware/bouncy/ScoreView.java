@@ -111,28 +111,38 @@ public class ScoreView extends View {
                 long now = currentMillis();
                 if (lastUpdateTime == null) {
                     lastUpdateTime = now;
-                }
-                else if (now - lastUpdateTime > gameOverMessageCycleTime) {
+                } else if (now - lastUpdateTime > gameOverMessageCycleTime) {
                     cycleGameOverMessage(score);
                     lastUpdateTime = now;
                 }
-                displayString = displayedGameOverMessage(score, unlimitedBalls);
+
+                // #task
+                if (highScores.size() != 0) {
+                    displayString = displayedGameOverMessage(score, unlimitedBalls);
+                }
             }
         }
 
         int width = this.getWidth();
         int height = this.getHeight();
-        textPaint.getTextBounds(displayString, 0, displayString.length(), textRect);
-        // textRect ends up being too high
-        c.drawText(
-                displayString,
-                width / 2.0f - textRect.width() / 2.0f, height / 2.0f + textRect.height() / 2.0f,
-                textPaint);
-        if (showFPS && fps > 0) {
-            c.drawText(String.format("%.1f fps", fps), width * 0.02f, height * 0.25f, fpsPaint);
-        }
-        if (debugMessage != null) {
-            c.drawText(debugMessage, width * 0.02f, height * 0.75f, fpsPaint);
+
+        // #task
+        // If the clear button is pressed while showing the scores it will fails
+        // because it's trying to draw something that's not there
+        if(highScores.size() != 0) {
+            textPaint.getTextBounds(displayString, 0, displayString.length(), textRect);
+
+            // textRect ends up being too high
+            c.drawText(
+                    displayString,
+                    width / 2.0f - textRect.width() / 2.0f, height / 2.0f + textRect.height() / 2.0f,
+                    textPaint);
+            if (showFPS && fps > 0) {
+                c.drawText(String.format("%.1f fps", fps), width * 0.02f, height * 0.25f, fpsPaint);
+            }
+            if (debugMessage != null) {
+                c.drawText(debugMessage, width * 0.02f, height * 0.75f, fpsPaint);
+            }
         }
         if (gameInProgress) {
             // Draw balls.
@@ -211,28 +221,32 @@ public class ScoreView extends View {
 
     // Returns message to show when game is not in progress.
     String displayedGameOverMessage(long lastScore, boolean unlimitedBalls) {
-        switch (gameOverMessageIndex) {
-            case TOUCH_TO_START_MESSAGE:
-                return getContext().getString(R.string.touch_to_start_message);
-            case LAST_SCORE_MESSAGE:
-                return getContext().getString(
-                        R.string.last_score_message, formatScore(lastScore, unlimitedBalls));
-            case HIGH_SCORE_MESSAGE:
-                // highScoreIndex could be too high if we just switched from a different table.
-                int index = Math.min(highScoreIndex, this.highScores.size() - 1);
-                // High scores are never recorded when using unlimited balls.
-                String formattedScore = formatScore(this.highScores.get(index), false);
-                if (index == 0) {
-                    return getContext().getString(R.string.top_high_score_message, formattedScore);
-                }
-                else {
+        // #taskremoveScore
+        if(highScores.size() != 0 ) {
+            switch (gameOverMessageIndex) {
+                case TOUCH_TO_START_MESSAGE:
+                    return getContext().getString(R.string.touch_to_start_message);
+                case LAST_SCORE_MESSAGE:
                     return getContext().getString(
-                            R.string.other_high_score_message, index + 1, formattedScore);
-                }
-            default:
-                throw new IllegalStateException(
-                        "Unknown gameOverMessageIndex: " + gameOverMessageIndex);
+                            R.string.last_score_message, formatScore(lastScore, unlimitedBalls));
+                case HIGH_SCORE_MESSAGE:
+                    // highScoreIndex could be too high if we just switched from a different table.
+                    int index = Math.min(highScoreIndex, this.highScores.size() - 1);
+                    // High scores are never recorded when using unlimited balls.
+                    String formattedScore = formatScore(this.highScores.get(index), false);
+                    if (index == 0) {
+                        return getContext().getString(R.string.top_high_score_message, formattedScore);
+                    } else {
+                        return getContext().getString(
+                                R.string.other_high_score_message, index + 1, formattedScore);
+                    }
+                default:
+                    throw new IllegalStateException(
+                            "Unknown gameOverMessageIndex: " + gameOverMessageIndex);
+            }
         }
+        throw new IllegalStateException(
+                "Unknown gameOverMessageIndex: " + gameOverMessageIndex);
     }
 
     private String formatScore(long score, boolean unlimitedBalls) {
@@ -258,5 +272,11 @@ public class ScoreView extends View {
 
     public void setDebugMessage(String msg) {
         debugMessage = msg;
+    }
+
+
+    public void clear() {
+        highScores.clear();
+
     }
 }

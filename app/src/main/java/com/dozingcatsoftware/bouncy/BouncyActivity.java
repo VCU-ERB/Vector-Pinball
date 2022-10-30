@@ -69,6 +69,7 @@ public class BouncyActivity extends Activity {
     Button aboutButton;
     Button preferencesButton;
     Button showHighScoreButton;
+    Button clearAllScores;
     Button hideHighScoreButton;
     CheckBox unlimitedBallsToggle;
     ViewGroup highScoreListLayout;
@@ -86,6 +87,7 @@ public class BouncyActivity extends Activity {
     int numberOfLevels;
     int currentLevel = 1;
     List<Long> highScores;
+
     boolean showingHighScores = false;
     static int MAX_NUM_HIGH_SCORES = 5;
     static String HIGHSCORES_PREFS_KEY = "highScores";
@@ -170,6 +172,7 @@ public class BouncyActivity extends Activity {
         preferencesButton = findViewById(R.id.preferencesButton);
         unlimitedBallsToggle = findViewById(R.id.unlimitedBallsToggle);
         showHighScoreButton = findViewById(R.id.highScoreButton);
+        clearAllScores = findViewById(R.id.clearAllScores);
         hideHighScoreButton = findViewById(R.id.hideHighScoreButton);
         highScoreListLayout = findViewById(R.id.highScoreListLayout);
         noHighScoresTextView = findViewById(R.id.noHighScoresTextView);
@@ -485,12 +488,18 @@ public class BouncyActivity extends Activity {
                 // No high scores for unlimited balls.
                 if (!state.hasUnlimitedBalls()) {
                     long score = field.getGameState().getScore();
+
+
+
                     // Add to high scores list if the score beats the lowest existing high score,
                     // or if all the high score slots aren't taken.
-                    if (score > highScores.get(this.highScores.size() - 1) ||
+                    // #taskremoveScores
+                    // If the highscore is empty then it will update it
+                    if ((highScores.size() == 0) || score > highScores.get(this.highScores.size() - 1) ||
                             highScores.size() < MAX_NUM_HIGH_SCORES) {
                         this.updateHighScoreForCurrentLevel(score);
                     }
+
                 }
             }
         }
@@ -536,8 +545,10 @@ public class BouncyActivity extends Activity {
         }
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         SharedPreferences.Editor editor = prefs.edit();
+        // This is where the writing happens
         editor.putString(highScorePrefsKeyForLevel(level), scoresAsString.toString());
         editor.commit();
+
     }
 
     List<Long> highScoresFromPreferencesForCurrentLevel() {
@@ -664,6 +675,30 @@ public class BouncyActivity extends Activity {
         field.resetForLayoutMap(FieldLayoutReader.layoutMapForLevel(this, currentLevel));
     }
 
+    // #taskRemoveScores
+    public void clearAllScores(View view){
+        if(highScoreListLayout.getChildCount() != 0) {
+            // Removing the score from the preferences array and scores from the top bar
+            scoreView.highScores.clear();
+            highScores.clear();
+
+            // Got it from writeHighScoresToPreferences method
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            SharedPreferences.Editor editor = prefs.edit();
+
+            // This is where the writing happens
+            editor.clear();
+            editor.commit();
+
+
+            // Since the app doesn't have bulit in preventions to check if the score is 0
+            // while the game is running it restarts the app
+            finish();
+            startActivity(getIntent());
+
+        }
+
+    }
     public void showHighScore(View view) {
         this.fillHighScoreAdapter();
         showingHighScores = true;
@@ -673,6 +708,8 @@ public class BouncyActivity extends Activity {
     public void hideHighScore(View view) {
         showingHighScores = false;
         updateButtons();
+
+
     }
 
     private void fillHighScoreAdapter() {
@@ -699,4 +736,5 @@ public class BouncyActivity extends Activity {
         this.noHighScoresTextView.setVisibility(
                 this.highScoreListLayout.getChildCount() == 0 ? View.VISIBLE : View.GONE);
     }
+
 }
