@@ -681,20 +681,8 @@ public class BouncyActivity extends Activity {
             // Removing the score from the preferences array and scores from the top bar
             scoreView.highScores.clear();
             highScores.clear();
-
-            // Got it from writeHighScoresToPreferences method
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-            SharedPreferences.Editor editor = prefs.edit();
-
-            // This is where the writing happens
-            editor.clear();
-            editor.commit();
-
-
-            // Since the app doesn't have bulit in preventions to check if the score is 0
-            // while the game is running it restarts the app
-            finish();
-            startActivity(getIntent());
+            highScores.add(new Long(0));
+            showHighScore(view);
 
         }
 
