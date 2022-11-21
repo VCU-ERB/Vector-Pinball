@@ -1,0 +1,74 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dozingcatsoftware.bouncy"
+4    android:installLocation="auto"
+5    android:versionCode="35"
+6    android:versionName="1.11.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="4"
+9-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml
+11
+12    <uses-feature
+12-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:6:5-79
+13        android:glEsVersion="0x00020000"
+13-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:6:19-51
+14        android:required="false" />
+14-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:6:52-76
+15
+16    <application
+16-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:8:5-35:19
+17        android:allowBackup="true"
+17-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:9:9-35
+18        android:appCategory="game"
+18-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:13:9-35
+19        android:debuggable="true"
+20        android:icon="@mipmap/icon"
+20-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:10:9-36
+21        android:isGame="true"
+21-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:12:9-30
+22        android:label="@string/app_name"
+22-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:11:9-41
+23        android:testOnly="true"
+24        android:theme="@style/Theme.VPTheme" >
+24-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:14:9-45
+25
+26        <!--
+27            "uiMode" in android:configChanges prevents the app from restarting when battery saver
+28            mode is turned on or off. See https://github.com/flutter/flutter/issues/25626
+29        -->
+30
+31        <activity
+31-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:20:9-30:20
+32            android:name="com.dozingcatsoftware.bouncy.BouncyActivity"
+32-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:21:13-43
+33            android:configChanges="keyboard|keyboardHidden|orientation|uiMode"
+33-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:23:13-79
+34            android:exported="true"
+34-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:22:13-36
+35            android:screenOrientation="portrait" >
+35-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:24:13-49
+36            <intent-filter>
+36-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:25:13-29:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:26:17-69
+37-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:26:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:28:17-77
+39-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:28:27-74
+40            </intent-filter>
+41        </activity>
+42        <activity android:name="com.dozingcatsoftware.bouncy.AboutActivity" >
+42-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:31:9-32:20
+42-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:31:19-47
+43        </activity>
+44        <activity android:name="com.dozingcatsoftware.bouncy.BouncyPreferences" >
+44-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:33:9-34:20
+44-->/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/AndroidManifest.xml:33:19-51
+45        </activity>
+46    </application>
+47
+48</manifest>

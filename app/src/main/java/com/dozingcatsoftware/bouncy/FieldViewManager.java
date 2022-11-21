@@ -29,6 +29,7 @@ public class FieldViewManager {
 
     Field field;
     boolean independentFlippers;
+    boolean crazyMode;
     float maxZoom = 1.0f;
     int customLineWidth = 0;
 
@@ -49,6 +50,10 @@ public class FieldViewManager {
 
     public void setIndependentFlippers(boolean value) {
         independentFlippers = value;
+    }
+    //
+    public void setCrazyMode(boolean value){
+        crazyMode = value;
     }
 
     // Line width can be specified directly, otherwise it's a fraction of the smaller width or
@@ -197,7 +202,36 @@ public class FieldViewManager {
             }
             // activate or deactivate flippers
             boolean left = false, right = false;
-            if (this.independentFlippers && this.hasMultitouch) {
+            if ( this.crazyMode && this.independentFlippers && this.hasMultitouch) {
+                try {
+                    // Determine whether to activate left and/or right flippers,
+                    // using reflection for Android 2.2 multitouch APIs.
+                    if (actionType != MotionEvent.ACTION_UP) {
+                        int npointers = (Integer) getPointerCountMethod.invoke(event);
+                        // If pointer was lifted (ACTION_POINTER_UP), get its index so we don't
+                        // count it as pressed.
+                        int liftedPointerIndex = -1;
+                        if (actionType == MOTIONEVENT_ACTION_POINTER_UP) {
+                            liftedPointerIndex =
+                                    (event.getAction() & MOTIONEVENT_ACTION_POINTER_INDEX_MASK) >>
+                                            MOTIONEVENT_ACTION_POINTER_INDEX_SHIFT;
+                        }
+                        float halfwidth = fieldRenderer.getWidth() / 2.0f;
+                        for (int i = 0; i < npointers; i++) {
+                            if (i != liftedPointerIndex) {
+                                float touchx = (Float) getXMethod.invoke(event, i);
+                                // #task
+                                if (touchx > halfwidth) left = true;
+                                else right = true;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ignored) {
+                }
+            }
+            // #task  added else to if
+            else if (this.independentFlippers && this.hasMultitouch) {
                 try {
                     // Determine whether to activate left and/or right flippers,
                     // using reflection for Android 2.2 multitouch APIs.

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dozingcatsoftware.bouncy.app-mergeDebugResources-3:/values-v21/values-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/david/Documents/GitHub/Vector-Pinball/app/src/main/res/values-v21/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "438"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}
