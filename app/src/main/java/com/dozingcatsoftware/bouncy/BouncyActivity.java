@@ -422,7 +422,7 @@ public class BouncyActivity extends Activity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         fieldViewManager.setIndependentFlippers(prefs.getBoolean("independentFlippers", true));
         // #task
-        fieldViewManager.setCrazyMode(prefs.getBoolean("crazyMode", true));
+        fieldViewManager.setinvertFlippers(prefs.getBoolean("invertFlippers", true));
         scoreView.setShowFPS(prefs.getBoolean("showFPS", false));
 
         // If switching line width or OpenGL/Canvas, reset frame rate manager because maximum

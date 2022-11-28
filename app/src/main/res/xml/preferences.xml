@@ -31,8 +31,8 @@
 		    android:title="@string/show_fps_pref_title" />
 
 		<!--#task-->
-		<CheckBoxPreference android:key="crazyMode" android:enabled="true"
-			android:title="Crazy Mode" />
+		<CheckBoxPreference android:key="invertFlippers" android:enabled="true"
+			android:title="Invert Flippers" />
 		
 	</PreferenceCategory>
 </PreferenceScreen>

@@ -29,7 +29,7 @@ public class FieldViewManager {
 
     Field field;
     boolean independentFlippers;
-    boolean crazyMode;
+    boolean invertFlippers;
     float maxZoom = 1.0f;
     int customLineWidth = 0;
 
@@ -52,8 +52,8 @@ public class FieldViewManager {
         independentFlippers = value;
     }
     //
-    public void setCrazyMode(boolean value){
-        crazyMode = value;
+    public void setinvertFlippers(boolean value){
+        invertFlippers = value;
     }
 
     // Line width can be specified directly, otherwise it's a fraction of the smaller width or
@@ -202,7 +202,7 @@ public class FieldViewManager {
             }
             // activate or deactivate flippers
             boolean left = false, right = false;
-            if ( this.crazyMode && this.independentFlippers && this.hasMultitouch) {
+            if ( this.invertFlippers && this.independentFlippers && this.hasMultitouch) {
                 try {
                     // Determine whether to activate left and/or right flippers,
                     // using reflection for Android 2.2 multitouch APIs.
