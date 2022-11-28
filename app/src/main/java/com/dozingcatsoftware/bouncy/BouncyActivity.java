@@ -624,7 +624,7 @@ public class BouncyActivity extends Activity {
     }
 
     // Function to exit the game
-    public void ExitGame(){
+    public void ExitGame(View view){
         finish();
     }
     public void doAbout(View view) {
