@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 import com.badlogic.gdx.physics.box2d.Box2D;
+import com.dozingcatsoftware.vectorpinball.elements.FlipperElement;
 import com.dozingcatsoftware.vectorpinball.model.IStringResolver;
 import com.dozingcatsoftware.vectorpinball.util.IOUtils;
 import com.dozingcatsoftware.vectorpinball.model.Field;
@@ -421,6 +422,8 @@ public class BouncyActivity extends Activity {
     void updateFromPreferences() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         fieldViewManager.setIndependentFlippers(prefs.getBoolean("independentFlippers", true));
+        // #task
+        FlipperElement.setColoredFlippers(prefs.getBoolean("coloredFlippers", true));
         scoreView.setShowFPS(prefs.getBoolean("showFPS", false));
 
         // If switching line width or OpenGL/Canvas, reset frame rate manager because maximum

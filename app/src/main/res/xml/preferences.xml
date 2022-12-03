@@ -29,6 +29,10 @@
 
 		<CheckBoxPreference android:key="showFPS" android:enabled="true"
 		    android:title="@string/show_fps_pref_title" />
+
+		<!--#task-->
+		<CheckBoxPreference android:key="coloredFlippers" android:enabled="true"
+			android:title="Color Changing Flippers" />
 		
 	</PreferenceCategory>
 </PreferenceScreen>

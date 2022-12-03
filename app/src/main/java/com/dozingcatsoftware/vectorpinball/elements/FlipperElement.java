@@ -17,6 +17,8 @@ import com.dozingcatsoftware.vectorpinball.model.Color;
 import com.dozingcatsoftware.vectorpinball.model.Field;
 import com.dozingcatsoftware.vectorpinball.model.IFieldRenderer;
 import com.dozingcatsoftware.vectorpinball.util.MathUtils;
+// #task
+import com.dozingcatsoftware.bouncy.FieldViewManager;
 
 /**
  * FieldElement subclass for a flipper that is controlled by the player. A flipper consists of a
@@ -54,6 +56,8 @@ public class FlipperElement extends FieldElement {
     float upspeed, downspeed;
     float flipperDownAngle, flipperUpAngle;
     float cx, cy;  // Center of revolution.
+
+
 
     @Override
     public void finishCreateElement(Map<String, ?> params, FieldElementCollection collection) {
@@ -184,7 +188,11 @@ public class FlipperElement extends FieldElement {
             setEffectiveMotorSpeed(speed);
         }
     }
-
+    // #task
+    static boolean isColoredFlippers;
+    public static void setColoredFlippers(boolean value){
+        isColoredFlippers = value;
+    }
     @Override public void draw(Field field, IFieldRenderer renderer) {
         // Draw single line segment from anchor point.
         Vector2 position = anchorBody.getPosition();
@@ -198,6 +206,11 @@ public class FlipperElement extends FieldElement {
         float x2 = position.x + flipperLength * (float) Math.cos(actualAngle);
         float y2 = position.y + flipperLength * (float) Math.sin(actualAngle);
 
-        renderer.drawLine(x1, y1, x2, y2, currentColor(DEFAULT_COLOR));
+
+        //#task
+        if(isColoredFlippers)
+            renderer.drawLine(x1, y1, x2, y2, currentColor(Color.fromRGB((int)(Math.random() * 255 + 1),(int)(Math.random() * 255 + 1),(int)(Math.random() * 255 + 1))));
+        else
+            renderer.drawLine(x1, y1, x2, y2, currentColor(DEFAULT_COLOR));
     }
 }

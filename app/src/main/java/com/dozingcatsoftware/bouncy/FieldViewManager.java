@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.dozingcatsoftware.vectorpinball.elements.FlipperElement;
 import com.dozingcatsoftware.vectorpinball.model.Field;
 import com.dozingcatsoftware.vectorpinball.model.IFieldRenderer;
 
@@ -19,6 +20,7 @@ import android.view.MotionEvent;
  */
 
 public class FieldViewManager {
+
 
     IFieldRenderer fieldRenderer;
     Runnable startGameAction;
@@ -47,9 +49,13 @@ public class FieldViewManager {
         return field;
     }
 
+
+
     public void setIndependentFlippers(boolean value) {
         independentFlippers = value;
     }
+
+
 
     // Line width can be specified directly, otherwise it's a fraction of the smaller width or
     // height dimension. A factor of 1/216 works pretty well; on a 1080p display it's 5, which
@@ -195,6 +201,8 @@ public class FieldViewManager {
                     return true;
                 }
             }
+
+
             // activate or deactivate flippers
             boolean left = false, right = false;
             if (this.independentFlippers && this.hasMultitouch) {
