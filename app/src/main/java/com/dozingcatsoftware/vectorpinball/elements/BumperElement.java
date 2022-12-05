@@ -27,8 +27,8 @@ public class BumperElement extends FieldElement {
     public static final String OUTER_COLOR_PROPERTY = "outerColor";
     public static final String INACTIVE_LAYER_OUTER_COLOR_PROPERTY = "inactiveLayerOuterColor";
 
-    static final int DEFAULT_COLOR = Color.fromRGB(0, 0, 255);
-    static final int DEFAULT_OUTER_COLOR = Color.fromRGBA(0, 0, 255, 128);
+    static final int DEFAULT_COLOR = Color.fromRGB(0, 255, 0);
+    static final int DEFAULT_OUTER_COLOR = Color.fromRGBA(255, 0, 255, 128);
 
     Body bumperBody;
     List<Body> bumperBodySet;
@@ -114,12 +114,14 @@ public class BumperElement extends FieldElement {
     @Override public void draw(Field field, IFieldRenderer renderer) {
         if (outerRadius > 0) {
             int baseOuterColor = this.newOuterColor != null ? this.newOuterColor : this.outerColor;
+            //#task
             int currentOuterColor = colorApplyingLayerOrFlash(
-                    baseOuterColor, this.inactiveLayerOuterColor);
+                    Color.fromRGB(0, 255, 0), this.inactiveLayerOuterColor);
             renderer.fillCircle(this.cx, this.cy, outerRadius, currentOuterColor);
         }
         if (radius > 0) {
-            int currentInnerColor = currentColor(DEFAULT_COLOR);
+            // #task
+            int currentInnerColor = Color.fromRGB(0, 255, 0);
             renderer.fillCircle(this.cx, this.cy, radius, currentInnerColor);
         }
     }

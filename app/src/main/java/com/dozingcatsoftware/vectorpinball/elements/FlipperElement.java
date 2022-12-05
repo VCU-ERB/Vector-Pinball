@@ -42,7 +42,8 @@ public class FlipperElement extends FieldElement {
     public static final String UP_SPEED_PROPERTY = "upspeed";
     public static final String DOWN_SPEED_PROPERTY = "downspeed";
 
-    static final int DEFAULT_COLOR = Color.fromRGB(0, 255, 0);
+    // #task
+    static final int DEFAULT_COLOR = Color.fromRGB(255, 255, 0);
 
     Body flipperBody;
     List<Body> flipperBodySet;

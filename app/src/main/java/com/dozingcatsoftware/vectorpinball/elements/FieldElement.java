@@ -40,7 +40,8 @@ public abstract class FieldElement implements IDrawable {
     long score = 0;
 
     // Default wall color shared by WallElement, WallArcElement, WallPathElement.
-    static final int DEFAULT_WALL_COLOR = Color.fromRGB(64, 64, 160);
+    // #task
+    static final int DEFAULT_WALL_COLOR = Color.fromRGB(0, 255, 0);
 
     /**
      * Creates and returns a FieldElement object from the given map of parameters. The class to
