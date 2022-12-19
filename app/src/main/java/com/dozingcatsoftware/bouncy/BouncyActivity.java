@@ -1,5 +1,8 @@
 package com.dozingcatsoftware.bouncy;
 
+import com.dozingcatsoftware.bouncy.VPSoundpool;
+
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
@@ -7,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
+import com.dozingcatsoftware.bouncy.VPSoundpool;
 import com.badlogic.gdx.physics.box2d.Box2D;
 import com.dozingcatsoftware.vectorpinball.model.IStringResolver;
 import com.dozingcatsoftware.vectorpinball.util.IOUtils;
@@ -16,11 +19,13 @@ import com.dozingcatsoftware.vectorpinball.model.FieldDriver;
 import com.dozingcatsoftware.vectorpinball.model.GameState;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -74,6 +79,7 @@ public class BouncyActivity extends Activity {
     ViewGroup highScoreListLayout;
     View noHighScoresTextView;
     final static int ACTIVITY_PREFERENCES = 1;
+    private static MediaPlayer music;
 
     Handler handler = new Handler(Looper.myLooper());
 
@@ -575,7 +581,23 @@ public class BouncyActivity extends Activity {
         editor.putInt(INITIAL_LEVEL_PREFS_KEY, level);
         editor.commit();
     }
+    boolean newMusic;
+    public boolean newMusic(){
+        return newMusic;
+    }
+    //#task
+    public void changeMusic(View view){
+        if(newMusic) {
+            VPSoundpool.changeBGMusic(R.raw.drumbassloop);
+            newMusic = false;
+        }
+        else {
+            VPSoundpool.changeBGMusic(R.raw.elevatormusic);
+            newMusic = true;
+        }
 
+
+    }
     // Button action methods defined by android:onClick values in main.xml.
     public void doStartGame(View view) {
         if (field.getGameState().isPaused()) {

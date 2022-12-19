@@ -9,9 +9,12 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+import android.util.AndroidRuntimeException;
 import android.util.Log;
 
 import com.dozingcatsoftware.vectorpinball.model.AudioPlayer;
+import com.dozingcatsoftware.vectorpinball.model.Color;
+import com.dozingcatsoftware.vectorpinball.model.Field;
 
 public class VPSoundpool {
 
@@ -46,6 +49,10 @@ public class VPSoundpool {
 
     private static final String LOG_TAG = "VPSoundPool";
 
+
+    public static Context getmContext(){
+        return mContext;
+    }
     public static void initSounds(Context theContext) {
         Log.v(LOG_TAG, "initSounds");
         mContext = theContext;
@@ -133,7 +140,15 @@ public class VPSoundpool {
             hapticFn.run();
         }
     }
+    // #task
+    public static void changeBGMusic(int nextMusic){
+        drumbass.stop();
+        drumbass = MediaPlayer.create(mContext, nextMusic);
+        System.out.println("\u001B[32m"+ nextMusic);
+        drumbass.setVolume(1.0f,1.0f);
+        drumbass.start();
 
+    }
     public static void playScore() {
         if (!soundsLoaded) return;
 
@@ -146,7 +161,7 @@ public class VPSoundpool {
 
         //start playing the drumbassloop after 20 scoring hits
         cScore++;
-        if (musicEnabled && cScore%20 == 0 && drumbass!=null && !drumbass.isPlaying()){
+        if (musicEnabled && drumbass!=null && !drumbass.isPlaying()){
             drumbass.setVolume(1.0f, 1.0f);
             drumbass.start();
         }

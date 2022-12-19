@@ -29,6 +29,7 @@
 
 		<CheckBoxPreference android:key="showFPS" android:enabled="true"
 		    android:title="@string/show_fps_pref_title" />
+
 		
 	</PreferenceCategory>
 </PreferenceScreen>

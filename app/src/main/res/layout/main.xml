@@ -116,8 +116,17 @@
                     android:focusableInTouchMode="true"
                     android:text="@string/end_game_button_label"
                     android:visibility="gone" />
+				<!--drumbass = MediaPlayer.create(mContext, R.raw.drumbassloop);-->
+				<!--#task-->
+				<Button
+					android:id="@+id/changemusic"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="10dp"
+					android:onClick="changeMusic"
+					android:text="Change BG Music" />
 
-                <Button
+				<Button
                     android:id="@+id/highScoreButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,7 +143,6 @@
                     android:onClick="doAbout"
                     android:focusableInTouchMode="true"
                     android:text="@string/help_button_label" />
-
                 <Button
                     android:id="@+id/preferencesButton"
                     android:layout_width="wrap_content"
