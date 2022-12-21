@@ -142,11 +142,14 @@ public class VPSoundpool {
     }
     // #task
     public static void changeBGMusic(int nextMusic){
-        drumbass.stop();
-        drumbass = MediaPlayer.create(mContext, nextMusic);
-        System.out.println("\u001B[32m"+ nextMusic);
-        drumbass.setVolume(1.0f,1.0f);
-        drumbass.start();
+        if(musicEnabled) {
+            drumbass.stop();
+            drumbass = MediaPlayer.create(mContext, nextMusic);
+            System.out.println("\u001B[32m" + nextMusic);
+            drumbass.setVolume(1.0f, 1.0f);
+            drumbass.start();
+        }
+
 
     }
     public static void playScore() {
