@@ -30,6 +30,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    namespace 'com.dozingcatsoftware.bouncy'
 }
 
 ext {
