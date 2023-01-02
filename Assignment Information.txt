@@ -1,0 +1,21 @@
+#Task 1 Make Flipper Object
+-------------------------------- Instructions Start Here --------------------------------
+Goal: The project aims to make a flipper object and enhance the flipper to make it an object
+      to imitate what it would look like in real life. Currently the flipper looks like a
+      line and doesn't look interesting for the players as the other objects.
+
+Steps
+1. Open the github folder in Android Studio and check that you have a build to launch the app
+   in a virtual environment 
+2. Go to assets -> tables and open table1.json
+3. Scroll down and look for FlipperElement, now you will see two FlipperElements for the two
+   flippers 
+4. Make another two flipper elements with the same properties as the two that are already defined
+5. Change the y-axis by decreasing 0.1 from each new FlipperElements
+6. Click the play button on the top right and wait for the virtual device to run the app 
+   then check the changes on the flipper object
+
+How To Check: The flipper object will add height to make it look thicker and have similar 
+              properties as the objects in the game
+
+--------------------------------- Instructions End Here ---------------------------------
