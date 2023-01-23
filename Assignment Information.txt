@@ -1,4 +1,4 @@
-#Task 1 Make Flipper Object
+# Task 1 Make Flipper Object
 #------------------------------- Instructions Start Here ------------------------------------------#
 Goal: The project aims to make a flipper object and enhance the flipper to make it an object
       to imitate what it would look like in real life. Currently the flipper looks like a
