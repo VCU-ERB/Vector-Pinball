@@ -627,6 +627,14 @@ public class BouncyActivity extends Activity {
         gotoAbout();
     }
 
+    // #task
+    /**
+     * Steps
+     * 1. Create the method you named for the onclick behavior of the button
+     * 2. It will be a public and pass a "View" object which will will not return anything 
+     * 3. Inside the method you will call the "finish" method which will end all activities of the app
+     * @param view
+     */
     public void scoreViewClicked(View view) {
         GameState state = field.getGameState();
         if (state.isGameInProgress() && !state.isPaused()) {

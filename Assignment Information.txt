@@ -1,0 +1,17 @@
+# Task 2 Create Exit Game Button
+#--------------------------------- Instructions Start Here ------------------------------------------#
+The goal of the project is to create a button to exit the game, since the game is full screen it will
+hide navigation controls. The button will close the game and save ram for the user's phone.
+
+Steps:
+    1. Open the github folder in Android Studio and check that you have a build to launch the app
+   in a virtual environment
+    2. Click Ctrl + Shift + F or Command + Shift + F(mac) and search #Task
+    3. Follow the instructions provided under each #Task function
+    4. By the end of your solution you'll have modified 2 files
+
+How to check: Your application will exit without showing any error messages in your virtual environment
+              or your run bar at the bottom of android studio
+
+
+#----------------------------------- Instructions End Here ------------------------------------------#

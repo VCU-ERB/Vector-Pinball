@@ -143,6 +143,19 @@
                     android:onClick="doPreferences"
                     android:focusableInTouchMode="true"
                     android:text="@string/preferences_button_label" />
+                
+                <!-- #task
+                Goal: You will have to create a button that calls a java function every time it's clicked
+                
+                Uses the buttons above as reference
+                1. Start with the creating the <Button/> tag
+                2. Give it an android id ExitGame
+                3. Set the width and height to wrap content
+                4. Add a margin bottom with 10sp definition
+                5. Create an onClick behaviour which will call a function you'll create later(e.g exitGame)
+                6. Create a focusableInTouchMode behaviour and set it to false
+                7. Create a text behaviour and name it "Exit Game"
+                -->
             </TableLayout>
         </LinearLayout>
 
