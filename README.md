@@ -11,24 +11,37 @@ Thanks to Peter Drescher for the sound effects; see [his article on creating the
 The GitHub project page is: [github.com/dozingcat/Vector-Pinball/](https://github.com/dozingcat/Vector-Pinball/).
 See [devnotes.txt](devnotes.txt) for an overview of the code layout.
 
-There is a very experimental table editor at [github.com/dozingcat/Vector-Pinball-Editor/](https://github.com/dozingcat/Vector-Pinball-Editor/)
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+# Installation
 
-Vector Pinball includes [the libgdx library by Bad Logic Games](http://libgdx.badlogicgames.com/).
-libgdx is used under [the terms of Version 2.0 of the Apache License](https://www.apache.org/licenses/LICENSE-2.0).
+Please watch the videos for your specfic software<br>
+[Windows](https://www.youtube.com/watch?v=G0MoOuxNbcw)<br>
+[Mac](https://www.youtube.com/watch?v=HiKt878ry1k)
 
-Sound, music, & audio code by [pdx of Twittering Machine](http://www.twittering.com).
+## Manual Installation
+### Windows
+1. Download and install [Java SE](https://www.oracle.com/java/technologies/java-se-glance.html)
+2. Download and open [Android Studio](https://developer.android.com/studio) installation file
+3. When promted with **Choose Components** include Andoid Virtual Device then click next ![image](https://user-images.githubusercontent.com/82111747/217068551-fcaefc36-b4ae-485a-b5a0-c99f2506f12b.png)
+4. Click next to start the installation 
+5. When done click next then finish to launch android studio
+6. Click **Do not import Settings** then click **next**<br>
+![image](https://user-images.githubusercontent.com/82111747/217068972-eb25126e-6e41-44ef-aaa8-572fb783a136.png)
+7. Choose **Standard** installation
+8. Select your theme
+9. Click **next to the verify settings** page<br>
+![image](https://user-images.githubusercontent.com/82111747/217069283-0c922d89-a0b6-4d1f-9f8d-87d47cbc7ae4.png)
+10. Click **Accept for the License Agreement** then **Finish**<br> 
+![image](https://user-images.githubusercontent.com/82111747/217069388-7bf8ca97-df6b-4230-a6cd-275447f1bdbd.png)
 
-# How to Translate
+# To work on the projects
+1. Choose your branch/task
+![image](https://user-images.githubusercontent.com/82111747/217070131-7b458633-ed3b-46dc-a60b-622478fb367d.png)
+2. Open the project in Android Studio
+3. Open Assignment Information.txt then follow the instructions for every task
+![image](https://user-images.githubusercontent.com/82111747/217070462-b8c60c76-1454-416d-85e4-df443d3517b2.png)
 
-Make a new folder in "app/src/main/res" named "values-**_lang_**" (with only at least 2 letters), copy-paste the strings.xml file from the "values" folder into it, and start editing it to the language of your choice.
 
-Also make a folder in "fastlane/metadata/android" with a folder named "**_lang_**" (with only at least 2 letters), and copy the .txt files from "en_US", and simply overwrite them with the description in your own language. The "title.txt" file is entirely optional if you feel like the title could also be translated.
+## Download the apk
 
-## Download
-
-[![Download from F-Droid](https://camo.githubusercontent.com/7df0eafa4433fa4919a56f87c3d99cf81b68d01c/68747470733a2f2f662d64726f69642e6f72672f77696b692f696d616765732f632f63342f462d44726f69642d627574746f6e5f617661696c61626c652d6f6e2e706e67 "Download from F-Droid")](https://f-droid.org/repository/browse/?fdid=com.dozingcatsoftware.bouncy)    [![Download from Google Play](https://user-images.githubusercontent.com/33793273/132640445-ee1c74c2-9330-4ba9-93f8-218acd52fab9.png "Download from Google Play")](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.bouncy)
+[![Download from F-Droid](https://upload.wikimedia.org/wikipedia/commons/3/3c/F-Droid_Logo_4.svg "Download from F-Droid")](https://f-droid.org/repository/browse/?fdid=com.dozingcatsoftware.bouncy)    [![Download from Google Play](https://user-images.githubusercontent.com/33793273/132640445-ee1c74c2-9330-4ba9-93f8-218acd52fab9.png "Download from Google Play")](https://play.google.com/store/apps/details?id=com.dozingcatsoftware.bouncy)
